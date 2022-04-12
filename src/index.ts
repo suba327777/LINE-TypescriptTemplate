@@ -1,11 +1,5 @@
 // Load the package
-import {
-  Client,
-  ClientConfig,
-  middleware,
-  MiddlewareConfig,
-  WebhookEvent,
-} from "@line/bot-sdk";
+import { Client, ClientConfig, middleware, MiddlewareConfig, WebhookEvent } from "@line/bot-sdk";
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
@@ -43,10 +37,11 @@ app.post(
 
     // Assign only the 0th element of the array from the events array to a variable.
     const events: WebhookEvent[] = req.body.events;
-  }
+  },
 );
 
 // Start the server
 app.listen(PORT, (): void => {
   console.log(`Application is live and listening on port ${PORT}`);
 });
+3;
