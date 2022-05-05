@@ -17,7 +17,7 @@ export const handlers = async (event: WebhookEvent): Promise<void> => {
         return await messagesHandler(event);
     }
   } catch (err: unknown) {
-    lineClient.pushMessage(event.source.userId!, errorMessage).catch;
+    lineClient.pushMessage(event.source.userId!, errorMessage);
     console.log(err);
     throw new Error("handlers");
   }
