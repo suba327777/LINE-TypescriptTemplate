@@ -17,7 +17,6 @@ app.use(middleware(lineMiddlewareConfig));
 app.post("/webhook", async (req: express.Request, res: express.Response): Promise<void> => {
   try {
     res.status(200).end();
-    console.log("aa");
     const events: WebhookEvent[] = req.body.events;
     events.map(async (event: WebhookEvent): Promise<void> => {
       handlers(event);
